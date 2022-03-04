@@ -1,0 +1,58 @@
+.ui-widget {
+    font-size: 12px !important;
+}
+.ui-layout-north {
+    z-index: 20 !important;
+    overflow: visible !important;;
+}
+.ui-layout-north .ui-layout-unit-content {
+    overflow: visible !important;
+}
+.ui-widget-header {
+    text-align: center;
+    text-transform: uppercase;
+}
+.ui-button {
+    margin-top: 10px !important;
+}
+.formularioLogin{
+    width: 270px;
+    margin: 0 auto;
+    
+}
+
+.nombreUsuario{
+   margin-top: 0px;   
+}
+
+.cerrarSesion{
+    float: right;
+}
+
+.imagenLogin{
+    background-image: url("../resources/imagenes/fondo.jpg");
+    background-size: cover;
+}
+
+.p{
+    font-size: 150%;
+    border: 5px solid;
+    background-color: hsl(180, 50%, 80%);
+}
+
+.botonAgregar{
+  color:  aqua;
+    
+}
+
+.col-md-7{  
+  width: 900px;
+  right: 100px;
+  float:  right ;
+  position:  absolute;
+  top: 10px;
+  right: 30px;
+   
+    
+}
+

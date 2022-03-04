@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title><ui:insert name="title">Pagina con JSF y PrimeFaces</ui:insert></title>
+        <h:outputStylesheet library="css" name="jsfcrud.css"/>
+        <h:outputStylesheet library="css" name="primeflex.css"/>
+        <h:outputScript library="js" name="jsfcrud.js"/>
+    </h:head>
+    <h:body>
+        <p:growl id="growl" life="3000" />
+        <p:layout fullPage="true">
+            <p:layoutUnit position="north" size="60">   
+                <center><h1><p:outputLabel value="#{bundle.AppName}"></p:outputLabel></h1></center>
+            </p:layoutUnit>
+
+            <p:layoutUnit  position="center" size="100">
+                <h4 class="imagenLogin"><center><h2><ui:insert name="title"/></h2></center>
+                <ui:insert name="contenido">Contenido de la Vista</ui:insert></h4>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="south" size="84">
+                <center><h4>Siguenos: Restaurante El Dorado<br></br>Telefono:  (312) 2316209<br></br>Visítanos: Calle Principal Municipio de Paispamba Cauca</h4></center>
+            </p:layoutUnit>
+        </p:layout>
+
+    </h:body>
+
+
+</html>
+

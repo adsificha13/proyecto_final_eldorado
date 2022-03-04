@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <f:event listener="#{usuarioController.getvalidarSesion()}" type="preRenderView"/>
+    <h:head>
+        <title><ui:insert name="title">Default Title</ui:insert></title>
+        <h:outputStylesheet library="css" name="jsfcrud.css"/>
+        <h:outputScript library="js" name="jsfcrud.js"/>
+    </h:head>
+
+    <h:body>
+        <p:growl id="growl" life="3000" />
+
+        <p:layout fullPage="true">
+            <p:layoutUnit position="north" size="110" header="#{bundle.AppName}">
+                <h:form id="menuForm">
+                    <p:menubar>
+                        <p:menuitem value="#{bundle.Home}" outcome="/Views/menuRol/menuAdministrador.xhtml" icon="ui-icon-home"/>                        
+                        <p:submenu label="#{bundle.Maintenance}">
+                             <p:menuitem value="Cliente" outcome="/Views/cliente/List" />                           
+                            <p:menuitem value="Producto" outcome="/Views/producto/List" />
+                            <p:menuitem value="Reporte" outcome="/Views/reporte/List_1" />                          
+                            <p:menuitem value="Usuario" outcome="/Views/usuario/List" />
+                            <p:menuitem value="Crear Venta" outcome="/Views/venta/List" />
+                           
+                        </p:submenu>
+                    </p:menubar>
+                </h:form>
+                <h:form><p:commandButton actionListener="#{usuarioController.destroyUsuarioSesion()}" value="Cerrar" class="cerrarSesion" update=":growl"/></h:form>
+                <h1 class="nombreUsuario"><p:outputLabel value="#{usuarioController.usuarioSesion.idrol.rol}"/>&nbsp;<p:outputLabel value="#{usuarioController.usuarioSesion.nombre}"/>&nbsp;<p:outputLabel value="#{usuarioController.usuarioSesion.apellidos}"/></h1>      
+            </p:layoutUnit>
+
+            <p:layoutUnit position="south" size="60">
+                <ui:insert name="footer"/>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="center" size="100">
+                <ui:insert name="body"/>
+            </p:layoutUnit>
+
+        </p:layout>
+
+    </h:body>
+
+</html>

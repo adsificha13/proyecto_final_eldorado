@@ -14,30 +14,24 @@
         </ui:define>
 
         <ui:define name="body">
-            <h:form>
-                <p:panel header="Platos">
-                    <p:layout id="menuA" style="width: 100%; height: 400px">
-                        <p:layoutUnit id="menuAdministrador" position="center">
-                            <h:graphicImage library="imagenes" name="comida.jpg" style="width: 35%"/>
-                            <h:graphicImage library="imagenes" name="frijol.jpg" style="width: 33%; height: 380px"/>
-                            <h:graphicImage library="imagenes" name="plato.jpg" style="width: 31%; height: 380px"/>
+            <h:form>                
+                    <h:form>
+                        <p:panel header="MENU PRINCIPAL" class="" id="MenuInicio">
+                            <center>
+                                <div id="MenuInicio">
+                                    <center>
+                                    <h:link outcome="/Views/cliente/List"> <h:graphicImage library="imagenes" name="imgcliente.jpg" class="botones_M_I"/></h:link>
 
+                                    <h:link outcome="/Views/venta/List"> <h:graphicImage library="imagenes" name="imgventas.jpg" class="botones_M_I"/> </h:link>
 
+                                    <h:link outcome="/Views/producto/List"> <h:graphicImage library="imagenes" name="imgproductos.jpg" class="botones_M_I"/></h:link>
 
-
-
-
-
-
-                        </p:layoutUnit>
-
-
-
-
-                    </p:layout>
-
-
-                </p:panel>
+                                    <h:link outcome="/Views/reporte/List_1"> <h:graphicImage library="imagenes" name="imgreporte.jpg" class="botones_M_I"/></h:link>
+                                    </center>
+                                </div>
+                            </center>    
+                        </p:panel>
+                    </h:form>            
             </h:form>
 
 

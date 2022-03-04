@@ -17,19 +17,17 @@
 
         <p:layout fullPage="true">
             <p:layoutUnit position="north" size="110" header="#{bundle.AppName}">
-                <h:form id="menuForm">
-                    <p:menubar>
-                        <p:menuitem value="#{bundle.Home}" outcome="/Views/menuRol/menuEmpleado.xhtml" icon="ui-icon-home"/>                        
-                        <p:submenu label="#{bundle.Maintenance}">
-                           <p:menuitem value="Cliente" outcome="/Views/cliente/List" />                           
-                            <p:menuitem value="Producto" outcome="/Views/producto/List" />
-                            <p:menuitem value="Reporte" outcome="/Views/reporte/List_1" /> 
-                            <p:menuitem value="Crear Venta" outcome="/Views/venta/List" />
-                            
-                            
-                        </p:submenu>
-                    </p:menubar>
-                </h:form>
+                <div class="card">
+                            <h:form>
+                                <p:breadCrumb>
+                                    <p:menuitem value="#{bundle.Home}" outcome="/Views/menuRol/menuEmpleado.xhtml" icon="ui-icon-home"/>
+                                    <p:menuitem value="Cliente" outcome="/Views/cliente/List"/>
+                                    <p:menuitem value="Producto" outcome="/Views/producto/List"/>
+                                    <p:menuitem value="Reporte" outcome="/Views/reporte/List_1"/>                
+                                    <p:menuitem value="Crear Venta" outcome="/Views/venta/List"/>
+                                </p:breadCrumb>
+                            </h:form>
+                        </div>
                 <h:form><p:commandButton actionListener="#{usuarioController.destroyUsuarioSesion()}" value="Cerrar" class="cerrarSesion" update=":growl"/></h:form>
                 <h1 class="nombreUsuario"><p:outputLabel value="#{usuarioController.usuarioSesion.idrol.rol}"/>&nbsp;<p:outputLabel value="#{usuarioController.usuarioSesion.nombre}"/>&nbsp;<p:outputLabel value="#{usuarioController.usuarioSesion.apellidos}"/></h1>      
             </p:layoutUnit>

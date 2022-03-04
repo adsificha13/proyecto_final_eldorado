@@ -13,17 +13,19 @@
     <h:body>
         <p:growl id="growl" life="3000" />
         <p:layout fullPage="true">
-            <p:layoutUnit position="north" size="60">   
-                <center><h1><p:outputLabel value="#{bundle.AppName}"></p:outputLabel></h1></center>
+            <p:layoutUnit position="north" size="60">                
+                <h1 class="login_header"><p:outputLabel value="#{bundle.AppName}"></p:outputLabel></h1>
             </p:layoutUnit>
 
-            <p:layoutUnit  position="center" size="100">
-                <h4 class="imagenLogin"><center><h2><ui:insert name="title"/></h2></center>
-                <ui:insert name="contenido">Contenido de la Vista</ui:insert></h4>
+            <p:layoutUnit position="center" size="100">
+                <div class="imagenLogin">
+                <center><h2><ui:insert name="title"/></h2></center>
+                <ui:insert name="contenido">Contenido de la Vista</ui:insert>
+                </div>
             </p:layoutUnit>
 
-            <p:layoutUnit position="south" size="84">
-                <center><h4>Siguenos: Restaurante El Dorado<br></br>Telefono:  (312) 2316209<br></br>Visítanos: Calle Principal Municipio de Paispamba Cauca</h4></center>
+            <p:layoutUnit position="south" size="84">               
+                <h4 class="login_footer">Siguenos: Restaurante El Dorado<br/>Telefono:  (312) 2316209<br/>Visítanos: Calle Principal Municipio de Paispamba Cauca</h4>
             </p:layoutUnit>
         </p:layout>
 
